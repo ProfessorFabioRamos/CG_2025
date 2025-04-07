@@ -1,10 +1,10 @@
 #include <GL/glut.h>
 #include <iostream>
-
 using namespace std;
 
 float x_position;
 float y_position;
+float velocity = 1.0f;
 
 void display()
 {
@@ -19,17 +19,19 @@ void display()
 	glFlush();
 }
 void teclado(unsigned char key, int x, int y) {
-	cout << int(key)<<"\n";
+	cout << int(key) << "\n";
 	if (key == 100) // letra d
-		x_position += 1.0f;
-	else if (key == 97) //letra a
-		x_position -= 1.0f;
-	else if (key == 119) //letra w
-		y_position += 1.0f;
-	else if (key == 115) //letra s
-		y_position -= 1.0f;
-	else if (key == 27)
+		x_position += velocity;
+	if (key == 97) // letra a
+		x_position -= velocity;
+	if (key == 119) // letra w
+		y_position += velocity;
+	if (key == 115) // letra s
+		y_position -= velocity;
+
+	if (key == 27) // tecla ESC
 		exit(0);
+
 	glutPostRedisplay();
 }
 int main(int argc, char** argv)
