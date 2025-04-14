@@ -11,11 +11,10 @@ void display()
     //glutWireCube(50);
     //glutSolidCube(50);
     //glRotatef(-90, 1, 0, 0);
-    //glutWireCone(20, 60, 6, 2);
-    //glutWireSphere(30, 40, 40);
+    //glutWireCone(20, 60, 100, 2);
+    //glutWireSphere(30, 50, 50);
     //glutWireTorus(20, 60, 30, 30);
     //glutWireTeapot(30);
-    //glutSolidTeapot(30);
 
     glBegin(GL_QUADS);
     // Frente
@@ -24,30 +23,36 @@ void display()
     glVertex3f(25.0f, 25.0f, 25.0f);
     glVertex3f(-25.0f, 25.0f, 25.0f);
 
+    glColor3ub(0, 0, 255);
     // Trás
     glVertex3f(-25.0f, -25.0f, -25.0f);
     glVertex3f(-25.0f, 25.0f, -25.0f);
     glVertex3f(25.0f, 25.0f, -25.0f);
     glVertex3f(25.0f, -25.0f, -25.0f);
 
-    // Esquerda
+    glColor3ub(255, 0, 0);
+
+    //// Esquerda
     glVertex3f(-25.0f, -25.0f, -25.0f);
     glVertex3f(-25.0f, -25.0f, 25.0f);
     glVertex3f(-25.0f, 25.0f, 25.0f);
     glVertex3f(-25.0f, 25.0f, -25.0f);
 
-    // Direita
+    glColor3ub(255, 255, 0);
+    //// Direita
     glVertex3f(25.0f, -25.0f, -25.0f);
     glVertex3f(25.0f, 25.0f, -25.0f);
     glVertex3f(25.0f, 25.0f, 25.0f);
     glVertex3f(25.0f, -25.0f, 25.0f);
 
-    // Topo
+    glColor3ub(0,255, 255);
+    //// Topo
     glVertex3f(-25.0f, 25.0f, -25.0f);
     glVertex3f(-25.0f, 25.0f, 25.0f);
     glVertex3f(25.0f, 25.0f, 25.0f);
     glVertex3f(25.0f, 25.0f, -25.0f);
 
+    glColor3ub(255, 0, 255);
     // Base
     glVertex3f(-25.0f, -25.0f, -25.0f);
     glVertex3f(25.0f, -25.0f, -25.0f);
